@@ -44,12 +44,10 @@ import {
       fetchData();
     };
   
-    // loading
     if (loading) {
       return <ActivityIndicator size="large" style={{ flex: 1 }} />;
     }
   
-    // error
     if (error) {
       return (
         <View style={styles.center}>
@@ -62,7 +60,7 @@ import {
       <FlatList
         data={data}
         keyExtractor={(item) => item.idCategory}
-        numColumns={2} // 🔥 GRID
+        numColumns={2}
         refreshControl={
           <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
         }
@@ -72,7 +70,7 @@ import {
             style={styles.card}
             onPress={() =>
               navigation.navigate("Browse", {
-                category: item.strCategory, // 🔥 kirim kategori
+                category: item.strCategory,
               })
             }
           >
@@ -99,7 +97,6 @@ import {
       padding: 10,
       alignItems: "center",
   
-      // shadow
       elevation: 3,
     },
     image: {

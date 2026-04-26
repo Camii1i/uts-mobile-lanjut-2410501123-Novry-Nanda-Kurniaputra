@@ -36,12 +36,10 @@ import {
       }
     };
   
-    // loading
     if (loading) {
       return <ActivityIndicator size="large" style={{ flex: 1 }} />;
     }
   
-    // error
     if (error) {
       return (
         <View style={styles.center}>
@@ -60,7 +58,7 @@ import {
             style={styles.card}
             onPress={() =>
               navigation.navigate("Detail", {
-                id: item.idMeal, // 🔥 penting
+                id: item.idMeal,
               })
             }
           >
