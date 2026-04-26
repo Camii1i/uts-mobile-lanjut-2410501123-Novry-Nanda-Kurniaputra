@@ -34,7 +34,6 @@ export default function FavoritesScreen() {
           <View style={{ flex: 1 }}>
             <Text style={styles.title}>{item.strMeal}</Text>
 
-            {/* 🔥 tombol hapus */}
             <TouchableOpacity
               style={styles.button}
               onPress={() =>
